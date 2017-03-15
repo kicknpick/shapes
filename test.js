@@ -1,23 +1,26 @@
 // requiring shape, square, triangle and pentagon file to access constructors and propterties of each shape
-var Shape = require("./shape.js");
-var Triangle = require("./triangle.js");
-var Square = require("./square.js");
-var Pentagon = require("./pentagon.js");
+var Shape = require("./Shape.js");
+Triangle = require("./Triangle.js");
+Square = require("./Square.js");
+Pentagon = require("./Pentagon.js");
 
 // create new shapes using constructors
-var sha = new Shape();
-var tri = new Triangle(1,2,3);
-var squ = new Square(5);
-var pen = new Pentagon();
+var triangle = new Triangle(1, 2, 3);
+var square = new Square(2);
+var pentagon = new Pentagon(2, 4, 6, 8, 10);
+var shape = new Shape();
 
-var shapesArray = [Shape, Triangle, Square, Pentagon];
 
-var newShapesArray = [sha, tri, squ, pen];
+// testing the type
+console.log(triangle.get_type());
+console.log(square.get_type());
+console.log(pentagon.get_type());
+console.log(shape);
 
-for (var i = 0; i < newShapesArray.length; i++){
-	console.log(" get_type: " + newShapesArray[i].get_type);
 
-	for (var j = 0; j < shapesArray.length; j++){
-		console.log(newShapesArray[i] instanceof shapesArray[j]);
-	};
-};
+
+// testing the instanceOf
+console.log(triangle instanceof Triangle);
+console.log(square instanceof Square);
+console.log(pentagon instanceof Pentagon);
+console.log(shape instanceof Shape);

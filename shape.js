@@ -1,15 +1,15 @@
 
 // create shape constructor
-function Shape(type){
-	this.type = type;
-};
+function Shape(){
+	this.type = "shape";
+}
 
 // create 
-Shape.prototype.get_type = function(type){
+Shape.prototype.get_type = function get_type(){
 	return this.constructor;
 };
 
 
 
 // allow other files to access shape.js
-module.exports = Shape
+module.exports = Shape;
